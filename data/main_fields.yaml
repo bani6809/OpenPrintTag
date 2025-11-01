@@ -183,45 +183,46 @@
     - If a material doesn't have a single primary color (for example rainbow or coextruded filaments), this field can be null.
 
 - key: 20
-  name: secondary_color_0
-  type: bytes
+  name: cielab_l
+  type: float32
   max_length: 4
-  unit: "[R, G, B] or [R, G, B, A]"
+  example: 77.72
   description:
-    - One of secondary colors of the material.
-    - Data format is the same as for `primary_color`
+    - CIELAB L color value 0.0 - 100.0, intended for color matching purposes.
+    - Ideally this should be measured per-spool and programmed per-tag with a spectrophotometer.
 
 - key: 21
-  name: secondary_color_1
-  type: bytes
+  name: cielab_a
+  type: float32
   max_length: 4
-  unit: "[R, G, B] or [R, G, B, A]"
+  example: 11.334
   description:
-    - See `secondary_color_0`
+    - CIELAB a color value Green (-) to Red (+)
 
 - key: 22
-  name: secondary_color_2
-  type: bytes
+  name: cielab_b
+  type: float32
   max_length: 4
-  unit: "[R, G, B] or [R, G, B, A]"
+  example: 93.913
   description:
-    - See `secondary_color_0`
+    - CIELAB b color value Blue (-) to Yellow (+)
 
 - key: 23
-  name: secondary_color_3
+  name: cielab_illuminant
   type: bytes
-  max_length: 4
-  unit: "[R, G, B] or [R, G, B, A]"
+  max_length: 2
+  example: 6504
   description:
-    - See `secondary_color_0`
+    - White point of CIELAB illuminant in kelvin. D65 (6504K) should be most common.
 
 - key: 24
-  name: secondary_color_4
-  type: bytes
+  name: ral_classic_color
+  type: string
   max_length: 4
-  unit: "[R, G, B] or [R, G, B, A]"
+  example: "1023"
   description:
-    - See `secondary_color_0`
+    - RAL classic color code (1000-9999) for color matching.
+    - Buy a RAL Classic fan deck and match the filament color.
 
 - key: 25
   deprecated: true
