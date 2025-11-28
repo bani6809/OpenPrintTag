@@ -237,3 +237,9 @@
   name: Styrene-Butadiene-Styrene
   category: FFF
   description: A flexible, rubber-like material (a type of TPE) known for good durability. It is relatively easy to print for a flexible filament.
+
+- key: 40
+  abbreviation: OBC
+  name: Olefin Block Copolymer
+  category: FFF
+  description: A lightweight flexible material that has good dimensional stability and is weather, UV, and chemical resistant.
